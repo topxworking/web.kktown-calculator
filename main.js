@@ -31,6 +31,7 @@ function calcCraftCapacity() {
 
   if (bagWeight <= 0) {
     resultEl.style.display = 'none';
+    document.getElementById('craft-howto').style.display = 'block'; // แสดงวิธีใช้ถ้าค่ายังไม่ถูกต้อง
     return;
   }
 
@@ -75,12 +76,14 @@ function calcCraftCapacity() {
   });
 
   resultEl.style.display = 'block';
+  document.getElementById('craft-howto').style.display = 'none'; // ซ่อนวิธีใช้เมื่อแสดงผล
 }
 
 function clearCraft() {
   document.getElementById('craftBagWeight').value = 0;
   document.getElementById('craft-result').style.display = 'none';
   document.getElementById('craft-bento-panels').innerHTML = '';
+  document.getElementById('craft-howto').style.display = 'block'; // แสดงวิธีใช้ใหม่
 }
 
 function switchTab(name, btn) {
@@ -163,11 +166,13 @@ function calcBento() {
   document.getElementById('cost-total-val').textContent  = `${costTotal.toLocaleString()} KKD`;
 
   document.getElementById('bento-result').style.display = 'block';
+  document.getElementById('bento-howto').style.display = 'none';
 }
 
 function clearBento() {
   ['b1', 'b2', 'b3'].forEach(id => document.getElementById(id).value = 0);
   document.getElementById('bento-result').style.display = 'none';
+  document.getElementById('bento-howto').style.display = 'block';
 }
 
 function calcProcess() {
@@ -223,6 +228,7 @@ function calcProcess() {
     : '';
 
   document.getElementById('proc-result').style.display = 'block';
+  document.getElementById('process-howto').style.display = 'none';
 }
 
 function clearProcess() {
@@ -231,6 +237,7 @@ function clearProcess() {
   document.getElementById('ratioIn').value   = 4;
   document.getElementById('ratioOut').value  = 2;
   document.getElementById('proc-result').style.display = 'none';
+  document.getElementById('process-howto').style.display = 'block';
 }
 
 (function () {

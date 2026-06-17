@@ -378,3 +378,29 @@ tr.done-row td { opacity: 0.35; text-decoration: line-through; }
   .tab-btn      { padding: 10px 14px; font-size: 13px; }
   main          { padding: 16px 12px 48px; }
 }
+
+.howto-card {
+  background: var(--surface2);
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  color: var(--text-soft);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.howto-title {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.howto-card ul {
+  padding-left: 20px;
+}
+.howto-card li {
+  margin-bottom: 4px;
+}
+.howto-card li:last-child {
+  margin-bottom: 0;
+}
